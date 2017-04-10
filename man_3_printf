@@ -1,5 +1,6 @@
 NAME
-    _printf. Prints a string to the screen, taking into account directives
+    int _printf(const char *format, ...)
+    Prints a string to the screen, taking into account directives
     that format the string.
 
 SYNOPSIS
