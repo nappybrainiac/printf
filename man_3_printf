@@ -1,9 +1,12 @@
-NAME
+.\" Manpage for _printf
+.\" Contact gndungi@gmail.com for typos or error correction.
+.TH man 8 "10 April, 2017" "1.0" "_printf man page"
+.SH NAME
     int _printf(const char *format, ...)
     Prints a string to the screen, taking into account directives
     that format the string.
 
-SYNOPSIS
+.SH SYNOPSIS
     Within a main function, _printf is used with no flags or options.
     directives can be used to format the string, and these include
     %c (character), %s (string), %d (decimal), and %i (integer).
@@ -14,20 +17,20 @@ SYNOPSIS
     str_len - returns the length of a string.
     count_digits - counts the number of digits in an integer.
     print_char - prints a single character.
-DESCRIPTION
+.SH DESCRIPTION
     _printf returns the length of the string that was printed to the screen
     and can be used in a similar but limited manner to printf. See man printf.
-EXAMPLES
+.SH EXAMPLES
     Some examples include:
     _printf("My name is %s", "Jane");
     _printf("My middle initial is %c", 'B');
     _printf("I will be %d by my next birthday", 89);
     _printf("I have %i dogs", 3);
-SEE ALSO
+.SH SEE ALSO
     printf, for a more detailed explanation of what printf can do.
-BUGS
+.SH BUGS
     Still being tested.
-AUTHOR
+.SH AUTHOR
    github.com/nappybrainiac
-COPYRIGHT
+.SH COPYRIGHT
     Open source
