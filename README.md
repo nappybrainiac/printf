@@ -4,6 +4,7 @@ This is an exploration of the complexities of the printf function
 and a simple recreation of that function.
 
 | **Filename** | **Description** |
+|--------------|-----------------|
 | `0-print_number.c` | The function `print_number` takes an integer and prints a string. |
 | `1-print_string.c` | The function `print_string` uses `print_char` to output a string. |
 | `2-str_len.c` | The function `str_len` returns the length of a string.|
