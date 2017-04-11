@@ -5,12 +5,8 @@
  * _printf - returns a string output to stdout
  * with the common directives (%s, %c, %i, etc)
  * accounted for.
- *
  * @format: refers to the string to output including
  * all directives pertaining to it.
- *
- * ...: refers to an unknown length of arguments.
- * to be replaced by the directives in format.
  *
  * Return: Returns the length (in bytes) of the string printed.
  */

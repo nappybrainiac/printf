@@ -2,7 +2,6 @@
 
 /**
  * print_number - returns the character values of an integer.
- *
  * @n: the integer to be printed
  * Return: always void.
  */

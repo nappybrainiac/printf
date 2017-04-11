@@ -1,6 +1,6 @@
+
 /**
  * str_len - returns the length of a string.
- *
  * @s: The pointer to the first letter of the string.
  *
  * Return: length (in bytes).
