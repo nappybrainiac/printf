@@ -1,6 +1,5 @@
 #include "holberton.h"
 
-
 /**
  * print_string - This function prints a string
  * starting at a specific pointer.
