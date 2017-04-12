@@ -7,39 +7,30 @@
  * Return: always void.
  */
 
-void print_number(int n)
-{
-	int numStore;
-	int numPrint;
-	int power = 10;
+ void print_number(int n)
+ {
+	int len, ncopy, count, digit;
 
-	numStore = n;
-
-	if (n == 0)
-		print_char('0');
-
+	count = 0;
 	if (n < 0)
 	{
-		print_char('-');
-		n = n * -1;
+		count += print_char('-');
 	}
-
-	numStore = n;
-
-	while (numStore > 9)
+	else
 	{
-		numStore = numStore / 10;
-		power = power * 10;
+		n = -n;
 	}
 
-	numStore = n;
-	power = power / 10;
-
-	while (numStore > 0)
+	for (len = 1, ncopy = n; ncopy < -9; len *= 10)
 	{
-		numPrint = numStore / power;
-		print_char(48 + numPrint);
-		numStore = numStore % power;
-		power = power / 10;
+		ncopy /= 10;
 	}
+
+	for (ncopy = n; len != 0; len /= 10)
+	{
+		digit = (ncopy / len) * -1;
+		count += print_char(digit + '0');
+		ncopy %= len;
+	}
+
 }
