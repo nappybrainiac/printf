@@ -24,6 +24,10 @@ int _printf(const char *format, ...)
 			print_char(format[j]);
 			length++; continue;
 		}
+		if (format[j + 1] == '\0')
+		{
+			return (-1);
+		}
 		switch (format[j + 1])
 		{
 			case 'c': /* a single character */

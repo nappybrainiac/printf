@@ -7,8 +7,8 @@
  * Return: always void.
  */
 
- void print_number(int n)
- {
+void print_number(int n)
+{
 	int len, ncopy, num;
 
 	if (n < 0) /* For negative numbers */
