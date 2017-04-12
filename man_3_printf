@@ -1,5 +1,5 @@
 .\" Manpage for _printf
-.\" Contact gndungi@gmail.com for typos or error correction.
+.\" Contact gndungi@gmail.com/wabluekey@gmail.com for typos or error correction.
 .TH man 8 "10 April, 2017" "1.0" "_printf man page"
 .SH NAME
     int _printf(const char *format, ...)
