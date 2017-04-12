@@ -11,7 +11,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j, length, fmt_len;
+	long int i, j, length, fmt_len;
 	char *s;
 	va_list ap;
 
@@ -23,10 +23,6 @@ int _printf(const char *format, ...)
 		{
 			print_char(format[j]);
 			length++; continue;
-		}
-		if (format[j + 1] == '\0')
-		{
-			return (-1);
 		}
 		switch (format[j + 1])
 		{
