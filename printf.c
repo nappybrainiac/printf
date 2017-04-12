@@ -11,22 +11,20 @@
 
 int _printf(const char *format, ...)
 {
-	const char *p;
-	int i, length, fmt_len;
+	int i, j, length, fmt_len;
 	char *s;
 	va_list ap;
 
 	va_start(ap, format);
 	length = 0; fmt_len = 0;
-	for (p = format; *p != '\0'; p++)
+	for (j = 0; format[j] != '\0'; j++)
 	{
-		if (*p != '%')
+		if (format[j] != '%')
 		{
-			print_char(*p);
+			print_char(format[j]);
 			length++; continue;
 		}
-		p++;
-		switch (*p)
+		switch (format[j + 1])
 		{
 			case 'c': /* a single character */
 				i = va_arg(ap, int);
@@ -48,6 +46,7 @@ int _printf(const char *format, ...)
 				print_number(i);
 				fmt_len += count_digits(i); break;
 		}
+		j++;
 	}
 	va_end(ap);
 	return (length + fmt_len);
