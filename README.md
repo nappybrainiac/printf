@@ -12,4 +12,4 @@ and a simple recreation of that function.
 | `holberton.h` | This library file contains all the protoypes of the functions used. |
 | `print_char.c` | The function `print_char` returns a single character. |
 | `printf.c` | The function `_printf` is the clone of c's printf function and returns the length of the string. |
-|`man_3_printf` | The documentation for the printf clone. |
+|`man_3_printf` | The man page documentation for the printf clone. |
