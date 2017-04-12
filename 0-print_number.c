@@ -9,28 +9,25 @@
 
  void print_number(int n)
  {
-	int len, ncopy, count, digit;
+	int len, ncopy, num;
 
-	count = 0;
-	if (n < 0)
+	if (n < 0) /* For negative numbers */
 	{
-		count += print_char('-');
+		print_char('-');
 	}
 	else
 	{
-		n = -n;
+		n *= -1 ; /* to print +ve numbers*/
 	}
-
-	for (len = 1, ncopy = n; ncopy < -9; len *= 10)
+	ncopy = n;
+	for (len = 1; ncopy < -9; len *= 10)
 	{
 		ncopy /= 10;
 	}
-
 	for (ncopy = n; len != 0; len /= 10)
 	{
-		digit = (ncopy / len) * -1;
-		count += print_char(digit + '0');
+		num = (ncopy / len) * -1;
+		print_char(num + '0');
 		ncopy %= len;
 	}
-
 }
