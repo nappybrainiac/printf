@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stdlib.h>
 #include "holberton.h"
 
 /**
@@ -11,41 +12,25 @@
 
 int _printf(const char *format, ...)
 {
-	long int i, j, length, fmt_len;
-	char *s;
+	long int j, length, fmt_len;
 	va_list ap;
 
 	va_start(ap, format);
-	length = 0; fmt_len = 0;
+	length = 0;
+	fmt_len = 0; /* from the directives */
 	for (j = 0; format[j] != '\0'; j++)
 	{
-		if (format[j] != '%')
+		if (format[j] != '%') /* Any other char but % */
 		{
 			print_char(format[j]);
 			length++; continue;
 		}
-		switch (format[j + 1])
+		/* if there is an empty space beside % */
+		if (format[j + 1] == '\0' || format[j + 1] == ' ')
 		{
-			case 'c': /* a single character */
-				i = va_arg(ap, int);
-				print_char(i);
-				fmt_len++; break;
-			case 's': /* a string */
-				s = va_arg(ap, char *);
-				if (!s)
-				{
-					fmt_len = 0; break;
-				}
-				print_string(s);
-				fmt_len += str_len(s); break;
-			case '%': /* print the % sign */
-				print_char('%');
-				length++; break;
-			case 'd': case 'i': /* for decimals and integers*/
-				i = va_arg(ap, int);
-				print_number(i);
-				fmt_len += count_digits(i); break;
+			return (-1);
 		}
+		fmt_len += replace(format[j + 1], ap);
 		j++;
 	}
 	va_end(ap);
