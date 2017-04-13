@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * s_dir - returns the length of string.
+ * id_dir - returns the length of a number.
  * @ap: the va_list where the argument is a member.
  *
  * Return: Returns the length (in bytes) of the string printed.

@@ -12,4 +12,8 @@ and a simple recreation of that function.
 | `holberton.h` | This library file contains all the protoypes of the functions used. |
 | `print_char.c` | The function `print_char` returns a single character. |
 | `printf.c` | The function `_printf` is the clone of c's printf function and returns the length of the string. |
+|`replace.c`| The function `replace` will detect the directive and replace it with the appropriate variable.|
+| `c_dir.c` | The function `c_dir` prints one character and returns the length|
+| `s_dir.c` | The function `s_dir` prints a string and returns the length|
+| `i_dir.c` | The function `id_dir` prints a number and returns the length|
 |`man_3_printf` | The man page documentation for the printf clone. |
