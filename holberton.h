@@ -15,7 +15,7 @@ int _printf(const char *format, ...);
 int str_len(char *s);
 
 /* print_string - prints out a string using print_char*/
-void print_string(char *str);
+int print_string(char *str);
 
 /* count_digits - returns the number of digits in an int.*/
 int count_digits(int n);

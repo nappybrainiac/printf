@@ -15,12 +15,11 @@ int s_dir(va_list ap)
 	str = va_arg(ap, char *);
 	if (!str)
 	{
-		fmt_len = 0;
+		fmt_len += print_string("(null)");
 	}
 	else
 	{
-		print_string(str);
-		fmt_len += str_len(str);
+		fmt_len += print_string(str);
 	}
 	return (fmt_len);
 }
