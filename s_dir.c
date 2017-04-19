@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "holberton.h"
 
 /**
@@ -19,7 +20,7 @@ int s_dir(va_list ap)
 	}
 	else
 	{
-		fmt_len += print_string(str);
+		fmt_len = print_string(str);
 	}
 	return (fmt_len);
 }
