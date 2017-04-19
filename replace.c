@@ -36,7 +36,7 @@ int replace(char c, va_list ap)
 				break;
 			default:
 				print_char('%');
-				fmt_len ++;
+				fmt_len++;
 				fmt_len += print_char(c);
 		}
 	}
