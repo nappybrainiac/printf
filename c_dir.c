@@ -16,8 +16,7 @@ int c_dir(va_list ap)
 	i = va_arg(ap, int);
 	if (i)
 	{
-		print_char(i);
-		fmt_len++;
+		fmt_len = print_char(i);
 	}
 	else
 	{
