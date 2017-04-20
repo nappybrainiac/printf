@@ -20,7 +20,7 @@ int c_dir(va_list ap)
 	}
 	else
 	{
-		fmt_len = 0;
+		fmt_len++;
 	}
 	return (fmt_len);
 }
