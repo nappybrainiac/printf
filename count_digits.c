@@ -9,8 +9,9 @@
 
 int count_digits(int n)
 {
-	int count = 0;
+	int count;
 
+	count = 0;
 	while (n != 0)
 	{
 		n /= 10;

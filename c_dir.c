@@ -10,9 +10,10 @@
 
 int c_dir(va_list ap)
 {
-	int fmt_len = 0;
+	int fmt_len;
 	int i;
 
+	fmt_len = 0;
 	i = va_arg(ap, int);
 	if (i)
 	{
