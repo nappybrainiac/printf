@@ -10,8 +10,9 @@
 
 int print_string(char *str)
 {
-	int i = 0;
+	int i;
 
+	i = 0;
 	while (*str != '\0')
 	{
 		i += print_char(*str);

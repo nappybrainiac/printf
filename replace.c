@@ -12,8 +12,9 @@
 
 int replace(char c, va_list ap)
 {
-	int fmt_len = 0;
+	int fmt_len;
 
+	fmt_len = 0;
 	if (!ap)
 	{
 		return (-1);
