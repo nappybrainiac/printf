@@ -15,7 +15,8 @@ int id_dir(va_list ap)
 	i = va_arg(ap, int);
 	if (!i)
 	{
-		return (-1);
+		print_number(0);
+		fmt_len++;
 	}
 	else
 	{
