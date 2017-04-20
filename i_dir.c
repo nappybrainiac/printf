@@ -14,15 +14,18 @@ int id_dir(va_list ap)
 
 	fmt_len = 0;
 	i = va_arg(ap, int);
+	if (i < 0)
+	{
+		fmt_len++;
+	}
 	if (!i)
 	{
-		print_number(0);
-		fmt_len++;
+		fmt_len += print_char('0');
 	}
 	else
 	{
 		print_number(i);
-		fmt_len = count_digits(i);
+		fmt_len += count_digits(i);
 	}
 	return (fmt_len);
 }
