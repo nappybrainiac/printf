@@ -21,7 +21,6 @@ int c_dir(va_list ap)
 	else
 	{
 		fmt_len += print_char('0');
-
 	}
 	return (fmt_len);
 }
