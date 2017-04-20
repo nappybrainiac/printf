@@ -1,7 +1,7 @@
 ## Exploring printf ##
 
 This is an exploration of the complexities of the printf function
-and a simple recreation of that function.
+and a simple recreation of that function. (Completed by Zee Adams & Gloria Bwandungi.)
 
 | **Filename** | **Description** |
 |--------------|-----------------|
