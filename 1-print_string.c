@@ -8,11 +8,14 @@
  * Return: void
  */
 
-void print_string(char *str)
+int print_string(char *str)
 {
+	int i = 0;
+
 	while (*str != '\0')
 	{
-		print_char(*str);
+		i += print_char(*str);
 		str += 1;
 	}
+	return (i);
 }

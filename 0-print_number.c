@@ -9,37 +9,25 @@
 
 void print_number(int n)
 {
-	int numStore;
-	int numPrint;
-	int power = 10;
+	int len, ncopy, num;
 
-	numStore = n;
-
-	if (n == 0)
-		print_char('0');
-
-	if (n < 0)
+	if (n < 0) /* For negative numbers */
 	{
 		print_char('-');
-		n = n * -1;
 	}
-
-	numStore = n;
-
-	while (numStore > 9)
+	else
 	{
-		numStore = numStore / 10;
-		power = power * 10;
+		n *= -1 ; /* to print +ve numbers*/
 	}
-
-	numStore = n;
-	power = power / 10;
-
-	while (numStore > 0)
+	ncopy = n;
+	for (len = 1; ncopy < -9; len *= 10) /* What multiple of 10?*/
 	{
-		numPrint = numStore / power;
-		print_char(48 + numPrint);
-		numStore = numStore % power;
-		power = power / 10;
+		ncopy /= 10;
+	}
+	for (ncopy = n; len != 0; len /= 10) /* print each number */
+	{
+		num = (ncopy / len) * -1;
+		print_char(num + '0');
+		ncopy %= len;
 	}
 }
