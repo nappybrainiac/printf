@@ -30,7 +30,7 @@
     printf, for a more detailed explanation of what printf can do.
 .SH BUGS
     Still being tested.
-.SH AUTHOR
-   github.com/nappybrainiac
+.SH AUTHORS
+   github.com/nappybrainiac, github.com/wabluekey
 .SH COPYRIGHT
     Open source
